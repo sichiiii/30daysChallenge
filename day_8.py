@@ -24,3 +24,21 @@ def filter_list(l):
         if type(i) == type(0):
             result.append(i)
     return result
+
+#https://www.codewars.com/kata/54edbc7200b811e956000556/train/python
+def count_sheeps(sheep):
+    count = 0 
+    for i in sheep:
+        if i == True:
+            count+=1
+    return count
+
+#https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/python
+def accum(s):
+    result = ''
+    for i in range(0 , len(s)):
+        result+=s[i].upper()
+        for j in range(0, i):
+            result+=s[i].lower()
+        result+='-'
+    return result[:-1]
