@@ -20,3 +20,14 @@ def make_readable(seconds):
         result +='0'
     return result+str(seconds)
     
+    
+#https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/python
+def move_zeros(array):
+    count = 0
+    for i in array:
+        if i == 0:
+            count+=1
+    for i in range(0, count):
+        array.remove(0)
+        array.append(0)
+    return array
