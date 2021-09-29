@@ -52,3 +52,21 @@ def maskify(cc):
         return '#' * (len(cc)-4) + cc[-4:]
     return cc
 
+#https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/python
+def find_next_square(sq):
+    if sq**(1/2) / 1 == int(sq**(1/2)):
+        return ((sq**(1/2))+1)*((sq**(1/2))+1)
+    return -1
+
+#https://www.codewars.com/kata/55b42574ff091733d900002f/train/python
+def containsNumber(value):
+    for character in value:
+        if character.isdigit():
+            return True
+    return False
+def friend(x):
+    result = []
+    for i in x:
+        if len(i) == 4 and containsNumber(i) != True:
+            result.append(i)
+    return result
