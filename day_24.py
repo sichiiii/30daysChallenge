@@ -45,3 +45,10 @@ def alphabet_position(text):
             if j.lower() in alph:
                 result+=str(alph.index(j.lower())+1) + ' '
     return result[:-1]
+
+#https://www.codewars.com/kata/5412509bd436bd33920011bc/train/python
+def maskify(cc):
+    if len(cc) > 3:
+        return '#' * (len(cc)-4) + cc[-4:]
+    return cc
+
