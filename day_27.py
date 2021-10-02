@@ -13,3 +13,14 @@ def human_years_cat_years_dog_years(human_years):
             result[1]+=4
             result[2]+=5
     return result
+
+#https://www.codewars.com/kata/5552101f47fc5178b1000050/train/python
+def dig_pow(n, p):
+    buffer = 0
+    count = p
+    for i in str(n):
+        buffer+=int(i)**count
+        count+=1
+    if buffer % n == 0:
+        return buffer//n
+    return -1
